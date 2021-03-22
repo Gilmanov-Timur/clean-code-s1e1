@@ -4,21 +4,22 @@ body {
   color: #333;
   font-family: Lato, sans-serif;
 }
-.eisenhower-matrix {
+header {
   width: 500px;
-  margin: 0 auto;
+  margin: 0 auto 16px auto;
   display: block;
   text-align: right;
 }
-.eisenhower-matrix img {
+header img {
+  vertical-align: top;
   width: 100%;
 }
-.eisenhower-matrix .more-info {
+header .more-info {
   font-family: fantasy, cursive;
 }
 
 @media (max-width:768px) {
-  .eisenhower-matrix {
+  header {
     text-align: center;
   }
 }
@@ -28,8 +29,13 @@ body {
   width: 400px;
   margin: 0 auto 0;
 }
+section:first-child {
+  padding-bottom: 16px;
+}
+section:first-child h3 {
+  margin-bottom: 20px;
+}
 .task {
-  width: 56%;
   display: inline-block;
 }
 ul {
@@ -38,6 +44,7 @@ ul {
 }
 li,
 h3 {
+  width: 100%;
   list-style: none;
 }
 input,
@@ -57,8 +64,7 @@ button:hover {
   color: #3a3a3a;
 }
 /* Heading */
-h3,
-label[for="new-task"] {
+h3 {
   color: #333;
   font-weight: 700;
   font-size: 15px;
@@ -68,6 +74,7 @@ label[for="new-task"] {
   text-transform: uppercase;
 }
 input[type="text"] {
+  box-sizing: border-box;
   margin: 0;
   font-size: 18px;
   line-height: 18px;
@@ -84,10 +91,6 @@ input[type="text"]:focus {
 }
 
 /* New Task */
-label[for="new-task"] {
-  display: block;
-  margin: 0 0 20px;
-}
 #new-task {
   width: 318px;
 }
@@ -97,6 +100,8 @@ p > button:hover {
 
 /* Task list */
 li {
+  display: flex;
+  align-items: center;
   overflow: hidden;
   padding: 20px 0;
   border-bottom: 1px solid #eee;
